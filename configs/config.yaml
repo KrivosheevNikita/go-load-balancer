@@ -4,9 +4,9 @@ health_interval: "5s"
 
 backends:
   - name: backend-1
-    url:  "http://localhost:9001"
+    url:  "url1"
   - name: backend-2
-    url:  "http://localhost:9002"
+    url:  "url2"
 
 default_rate_limit:
   capacity: 10
