@@ -27,6 +27,8 @@ func (h *Handler) handleClients(w http.ResponseWriter, r *http.Request) {
 	switch r.Method {
 	case http.MethodGet:
 		// Возвращаем JSON со всеми клиентами и их лимитами
+		w.Header().Set("Content-Type", "application/json;")
+		w.WriteHeader(http.StatusOK)
 		json.NewEncoder(w).Encode(h.store.ListClients())
 
 	case http.MethodPost:
